@@ -8,4 +8,8 @@ function moy(){
         console.log(moyenne);
 }
 moy(12, 8, 13);
-moy();
+moy(); 
+// Spread operator
+
+let notes = [12, 8, 13];
+moy(...notes);
