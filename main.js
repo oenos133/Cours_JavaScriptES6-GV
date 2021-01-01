@@ -1,15 +1,19 @@
 "use strict"
-function moy(){
-    let somme = 0;
-    for(let i = 0; i <arguments.length; i++){
-        somme +=arguments[i];
-    }
-    let moyenne = (somme / arguments.length) || 0;
-        console.log(moyenne);
+/*
+Factorielle :
+0! = 1
+1! = 1 * 0! = 1
+2! = 2 * 1! = 2
+3! = 3 * 2! = 6
+4! = 4 * 3! = 24
+n! = n * (n-1)!
+*/
+// Récursivité
+function facto(n) {
+	if (n == 0) {
+		return 1;
+	}
+	return n * facto(n - 1);
 }
-moy(12, 8, 13);
-moy(); 
-// Spread operator
+console.log(facto(10));
 
-let notes = [12, 8, 13];
-moy(...notes);
