@@ -1,23 +1,8 @@
-// Une classe
-class Stylo {
-    constructor(marque){
-        this.marque = marque;
-        
-        if (Stylo.nb ===undefined){
-            Stylo.nb = 0;
-        }
-        Stylo.nb++
-    }
-    ecrire() {
-        console.log(`Le stylo ${this.marque} écrit`);
-    };
-    static denombrer(){
-        console.log(`Il y a ${Stylo.nb} stylos`);
-    }
-}
-// Programme principal
-let stylo1 = new Stylo("bic");
-let stylo2 = new Stylo("pentel");
-console.log(Stylo.nb);
-Stylo.denombrer();
-stylo1.ecrire();
+let bernard = new Boulanger("Bernard");
+let baguette = new Produit("baguette", 0.20, 1.20);
+let croissant = new Produit("croissant", 0.25, 1.50);
+let painDeMie = new Produit("pain de mie", 0.50, 4.50);
+bernard.fabriquer(baguette, 80);
+bernard.fabriquer(croissant, 60);
+bernard.fabriquer(painDeMie, 20);
+bernard.bilan();
